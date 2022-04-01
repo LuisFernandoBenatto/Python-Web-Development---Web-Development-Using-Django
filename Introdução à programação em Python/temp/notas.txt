@@ -1,0 +1,4 @@
+Codigo,01,RA,202211113030001,Nome,Patrick,Notas,10,10,5.5,6.7
+Codigo,02,RA,202211113030002,Nome,Eduarda,Notas,9.8,7.5,6.3,5.7
+Codigo,39,RA,202211113030039,Nome,Rafael,Notas,10,10,5.5,6.7
+Codigo,38,RA,202211113030038,Nome,Daniela,Notas,9.8,7.5,6.3,5.7
