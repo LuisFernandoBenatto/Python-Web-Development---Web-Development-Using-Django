@@ -2,6 +2,9 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 
+def hello_world(request):
+    return HttpResponse("<h1>Hello, World</h1>")
+
 def hello(request, nome, idade):
     # return HttpResponse("<h1>Hello, World</h1>")
     # return HttpResponse("<h1>Hello, {}</h1>".format(nome))
