@@ -100,7 +100,7 @@
             return self.titulo
 ```
 #### admin.py
-````py
+```py
     from django.contrib import admin
     from core.models import Evento
     # Register your models here.
@@ -109,4 +109,37 @@
         list_display = ('titulo', 'data_evento', 'data_final_evento', 'data_criacao')
 
     admin.site.register(Evento, EventoAdmin)
+```
+#### models.py
+```py
+    from django.db import models
+    from django.contrib.auth.models import User
+
+    # Create your models here.
+
+    class Evento(models.Model):
+        titulo = models.CharField(max_length=100)
+        descricao = models.TextField(blank=True, null=True)
+        data_evento = models.DateTimeField(verbose_name='Data do evento')
+        data_final_evento = models.DateTimeField(verbose_name='Data final do evento', null=True)
+        data_criacao = models.DateTimeField(auto_now=True)
+        usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+
+        class Meta:
+            db_table = 'evento'
+        
+        def __str__(self):
+            return self.titulo
+```
+### Comando para fazer a migrations do app core
+```py
+    $ python manage.py makemigrations core  
+```
+### Sql migrate
+```py
+    $ python manage.py sqlmigrate core 0002
+```
+### Comando para subir para o banco de daods
+```py
+    $ python manage.py migrate core 0002
 ```

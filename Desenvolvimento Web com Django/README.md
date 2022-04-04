@@ -16,11 +16,11 @@
     Startar o projeto chamado hello_django
     $ django-admin startproject hello_django
 
-    Subir o servidor
-    $ python manage.py runserver 9999
-
     Statar o app chamado core
     $ django-admin startapp core
+
+    Subir o servidor
+    $ python manage.py runserver 9999
 ```
 #### hello_django/settings.py
     Adicionar o novo projeto

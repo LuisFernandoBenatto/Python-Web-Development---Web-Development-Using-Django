@@ -9,3 +9,15 @@
 >• Com o exemplo acima, a aplicação deverá retornar a soma de 10 e 20.
 
 >• Criar rotas também para Multiplicação, Divisão, Subtração e Resto. 
+
+## Execícios 02
+
+>• Crie uma rota que retorne o local do evento através do nome do evento
+
+>• URL - /eventos/<titulo_evento>
+
+>• Consulta: Evento.objects.get(titulo = titulo_evento)
+
+>• Para retornar apenas o local, basta utilizar objeto.nome_do_campo
+
+>• Evento.local 
