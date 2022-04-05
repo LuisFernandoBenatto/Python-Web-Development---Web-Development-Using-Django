@@ -1,3 +1,8 @@
 .lista_eventos{
     font-size: 20px;
 }
+
+.alinhamento > a{
+    display: flex;
+    justify-content: flex-end;
+}
