@@ -14,6 +14,9 @@
 
 <ul class="lista_eventos">
     {% for evento in eventos %}
+    <div class= {% if evento.get_evento_atrasado %}
+                    "color_red"
+                {% endif %}>
         <li><b>{{ evento.titulo }}</b></li>
         <p>{{evento.descricao}}</p>
         <p>{{evento.local_evento}}</p>
@@ -29,6 +32,7 @@
                 <button type="button" class="btn btn-danger">Excluir</button>
             </a>
         </div>
+    </div>
     {% endfor %}
 </ul>
 {% endblock %}
