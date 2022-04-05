@@ -1,0 +1,44 @@
+{% extends '../agenda/layouts/model_page.html'%}
+
+{% block content %}
+<h1>Evento</h1>
+
+<div class="container">
+    <form action="submit" method="POST">{% csrf_token %}
+        <div>
+            <label for="titulo">Título</label><br />
+            <input type="text" name="titulo" size="30">
+        </div>
+        <div>
+            <label for="descricao">Descrição</label><br />
+            <textarea id="" name="descricao" rows="10" cols="31">
+                Descrição do evento
+            </textarea>
+        </div>
+        <div>
+            <label for="local_evento">Local do evento</label><br />
+            <input type="text" name="local_evento" size="30">
+        </div>
+        <div>
+            <label for="data_evento">Data do evento</label><br />
+            <input type="datetime-local" name="data_evento" size="30">
+        </div>
+        <div>
+            <label for="data_final_evento">Data final do evento</label><br />
+            <input type="datetime-local" name="data_final_evento" size="30">
+        </div>
+        <br />
+        <div>
+            <button type="submit" class="btn btn-success">
+                Salvar
+            </button>
+            <a href="/">
+                <button type="button" class="btn btn-secondary">
+                    Cancelar
+                </button>
+            </a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

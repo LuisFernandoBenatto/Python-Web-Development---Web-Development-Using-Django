@@ -4,10 +4,19 @@
 <h1>Agenda</h1>
 <h2>Agendamento</h2>
 
+<div class="alinhamento_end">
+    <a href="evento/">
+        <button type="button" class="btn btn-secondary">
+            Novo Evento
+        </button>
+    </a>
+</div>
+
 <ul class="lista_eventos">
     {% for evento in eventos %}
         <li><b>{{ evento.titulo }}</b></li>
         <p>{{evento.descricao}}</p>
+        <p>{{evento.local_evento}}</p>
         <p>{{evento.get_data_evento}}</p>
         <p>{{evento.get_data_final_evento}}</p>
     {% endfor %}
