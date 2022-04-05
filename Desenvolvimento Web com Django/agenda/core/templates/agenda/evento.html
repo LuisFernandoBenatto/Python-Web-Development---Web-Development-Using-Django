@@ -6,26 +6,57 @@
 <div class="container">
     <form action="submit" method="POST">{% csrf_token %}
         <div>
+            <input 
+                type="number"
+                name="id_evento"
+                value="{{ evento.id }}"
+                hidden
+            >
             <label for="titulo">Título</label><br />
-            <input type="text" name="titulo" size="30">
+            <input 
+                type="text" 
+                name="titulo" 
+                size="30"
+                value="{{ evento.titulo }}"
+            >
         </div>
         <div>
             <label for="descricao">Descrição</label><br />
-            <textarea id="" name="descricao" rows="10" cols="31">
-                Descrição do evento
+            <textarea 
+                id="" 
+                name="descricao" 
+                rows="10" 
+                cols="31"    
+            >
+                {{ evento.descricao }}
             </textarea>
         </div>
         <div>
             <label for="local_evento">Local do evento</label><br />
-            <input type="text" name="local_evento" size="30">
+            <input 
+                type="text" 
+                name="local_evento" 
+                size="30"
+                value="{{ evento.local_evento }}"
+            >
         </div>
         <div>
             <label for="data_evento">Data do evento</label><br />
-            <input type="datetime-local" name="data_evento" size="30">
+            <input 
+                type="datetime-local" 
+                name="data_evento" 
+                size="30"
+                value="{{ evento.get_data_input_evento }}"
+            >
         </div>
         <div>
             <label for="data_final_evento">Data final do evento</label><br />
-            <input type="datetime-local" name="data_final_evento" size="30">
+            <input 
+                type="datetime-local" 
+                name="data_final_evento" 
+                size="30"
+                value="{{ evento.get_data_input_final_evento }}"
+            >
         </div>
         <br />
         <div>

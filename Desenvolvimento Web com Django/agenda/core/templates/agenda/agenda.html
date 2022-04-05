@@ -19,6 +19,16 @@
         <p>{{evento.local_evento}}</p>
         <p>{{evento.get_data_evento}}</p>
         <p>{{evento.get_data_final_evento}}</p>
+
+        <div>
+            <a href="evento/?id={{ evento.id }}">
+                <button type="button" class="btn btn-info">Editar </button>
+            </a>
+            <br />
+            <a href="evento/delete/{{ evento.id }}">
+                <button type="button" class="btn btn-danger">Excluir</button>
+            </a>
+        </div>
     {% endfor %}
 </ul>
 {% endblock %}
